@@ -8,7 +8,7 @@ The data is the CheXpert dataset, a large public dataset of 224,316 images from 
 <p>The dataset is broken into train and test sets, with 61,313 patients (212,220 images) in the train set and 3,227 patients (11,194) to test. Each image is 512x512x1 pixels. While training, the data is augmented in order to prevent overfitting. </p>
 
 ## Model
-The model is a convolutional neural network (CNN). It has a series of convolutional blocks, each consisting of a convolutional layer, batch normalization, max pooling, and dropout, which reduce dimensionality while increasing depth. These are followed by fully-connected layers as the classifier. The model used binary crossentropy loss and Adam optimizer, with a learning rate starting at 1e-3 and slowly decreasing until 1e-5. It was trained for 60+ hours on a Kaggle GPU and the weights were downloaded and uploaded in this notebook.
+The model is a convolutional neural network (CNN). It has a series of convolutional blocks, each consisting of a convolutional layer, batch normalization, max pooling, and dropout, which reduce dimensionality while increasing depth. These are followed by fully-connected layers as the classifier. The model used binary crossentropy loss and Adam optimizer, with a learning rate starting at 1e-3 and slowly decreasing until 1e-5. It was trained for 60+ hours on a GPU and the weights were downloaded and uploaded in this notebook.
 
 ## Results
 As shown in the notebook, the model achieved an accuracy of 96% and an AUC score of .9926 on the training data. On the test data, it attains an accuracy of 84.2% and an AUC of .908.
